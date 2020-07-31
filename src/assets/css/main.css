@@ -3,7 +3,7 @@ main.masthead {
     color: #fff;
     background-image: url(../img/header-bg.gif);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
     background-size: 100%;
 
@@ -14,16 +14,17 @@ main.masthead .intro-text {
 }
 
 main.masthead .intro-text .intro-lead-in {
-    font-size: 45px;
+    font-size: 22px;
     font-style: italic;
-    line-height: 50px;
+    line-height: 22px;
     margin-bottom: 25px;
     font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 }
+
 main.masthead .intro-text .intro-heading {
-    font-size: 45px;
-    /*font-weight: 500;*/
+    font-size: 50px;
+    font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -49,9 +50,10 @@ main.masthead .intro-text .intro-heading {
 .sidebar {
     /*background: -webkit-gradient(linear, left bottom, left top, from(white), to(white));
     background: linear-gradient(to top, white, #6B66FF);*/
+    border:  1px solid black;
     padding: 0;
     width: 250px;
-    height: 250px;
+    height: 2500px;
     z-index: 11;
     transition: width 0.25s ease, background 0.25s ease;
     -webkit-transition: width 0.25s ease, background 0.25s ease;
@@ -66,7 +68,6 @@ main.masthead .intro-text .intro-heading {
     -ms-flex-direction: column;
     flex-direction: column; }
 .sidebar > .nav .nav-item .collapse {
-    position:relative;
     z-index: 999; }
 .sidebar > .nav .nav-item:not(.hover-open) .collapse .sub-menu,
 .sidebar > .nav .nav-item:not(.hover-open) .collapsing .sub-menu {
@@ -131,7 +132,7 @@ main.masthead .intro-text .intro-heading {
     margin: 0 30px;
     font-size: 15px;
     font-weight: 500;
-    padding: 0px 0px 15px 0px; }
+    padding: 10px 0px 15px 0px; }
 .sidebar > .nav > .nav-item > .nav-link {
     height: 52px; }
 .sidebar > .nav > .nav-item:not(.nav-profile) > .nav-link {
@@ -148,7 +149,7 @@ main.masthead .intro-text .intro-heading {
     display: block; }
 
 .sidebar > .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile):not(.hover-open) > .nav-link:not([aria-expanded="true"]) {
-    background: gray;
+    background: #FFD9FA;
     padding-left: 65px; }
 .sidebar > .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile):not(.hover-open) > .nav-link:not([aria-expanded="true"]):before {
     border-color: black; }
@@ -158,11 +159,12 @@ main.masthead .intro-text .intro-heading {
 .footer {
     text-align: center;
     background: #2176C1;
-    padding: 30px 1rem;
+    padding: 20px 1rem;
     transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease;
     -ms-transition: all 0.25s ease;
+    border-top: 1px solid #cdd6dc;
     font-size: 1.2em;
     font-family: "roboto", sans-serif;
     border: 0px;
