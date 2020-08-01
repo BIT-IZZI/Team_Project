@@ -43,7 +43,8 @@ const VideoUploadPage = () => {
             <div onSubmit>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                     {/*드랍존*/}
-                    <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+                    <input type="file" className="form-control-file"/>
+                 {/*   <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                         {({getRootProps, getInputProps}) => (
                             <section>
                                 <div {...getRootProps()}>
@@ -52,7 +53,7 @@ const VideoUploadPage = () => {
                                 </div>
                             </section>
                         )}
-                    </Dropzone>
+                    </Dropzone>*/}
                     {/*썸네일존*/}
                     <div>
                         <img src alt/>

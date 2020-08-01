@@ -21,10 +21,13 @@ export const Navigator = () => (
                 <Link to="/notice"><Navbar.Brand>공지사항</Navbar.Brand></Link>
                 <Link to ="/community"><Navbar.Brand>커뮤니티</Navbar.Brand></Link>
                 <Link to="/contacts"><Navbar.Brand>고객지원</Navbar.Brand></Link>
+                <Link to="/video"><Navbar.Brand>비디오올리기</Navbar.Brand></Link>
+
             </Nav>
             <Form inline className="ml-auto">
                 <Link to="/login"><Navbar.Brand>로그인</Navbar.Brand></Link>
                 <Link to="/signup"><Navbar.Brand>회원가입</Navbar.Brand></Link>
+                <Link to="/my"><Navbar.Brand>마이페이지</Navbar.Brand></Link>
             </Form>
 
         </Navbar>
