@@ -9,7 +9,7 @@ import {Navbar} from "react-bootstrap";
 const Contacts = () => {
     return (
         <>
-            <Navigator/>
+
 
             <SideBar/>
                 <div id="wrapper">
@@ -85,7 +85,7 @@ const Contacts = () => {
                     </div>
                     {/* /#page-wrapper */}
                 </div>
-            <Footer/>
+
         </>
     );
 };

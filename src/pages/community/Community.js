@@ -9,7 +9,7 @@ import {Navbar} from "react-bootstrap";
 const Community = () => {
         return (
          <>
-            <Navigator/>
+
             <SideBar/>
                 <div id="wrapper">
                     <div id="page-wrapper">
@@ -153,7 +153,7 @@ const Community = () => {
                     </div>
                     {/* /#page-wrapper */}
                 </div>
-            <Footer/>
+
          </>
         );
 };
