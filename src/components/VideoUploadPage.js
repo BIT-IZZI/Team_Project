@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import Dropzone from "react-dropzone";
 import {MDBBtn, MDBIcon, MDBTypography} from 'mdbreact'
-import Drag from "./videoUpload/Drag";
-import Card from "./videoUpload/Card";
-import Axios from "axios";
+
 
 const PrivateOptions=[
     {value:0,label:"Private"},
@@ -21,9 +19,6 @@ const CategoryOptions=[
 const VideoUploadPage = () => {
     const [videoTitle,setVideoTitle]=useState("")
     const [description,setDescription]=useState("")
-    const [filePath,setFilePath]=useState("")
-    const [duration,setDureation]=useState("")
-    const [thumbnailPath,setThumbnailPath]=useState("")
     const [privates,setPrivates]=useState(0)
     const [category,setCategory]=useState("영상")
     const onChangeTitle=e=>{
@@ -38,53 +33,9 @@ const VideoUploadPage = () => {
     const onChangeCategory=e=>{
         setCategory(e.currentTarget.value)
     }
-    const onDrop=(files)=>{
-        let formDate=new FormData;
-        const config={
-            header:{'content-type':'multipart/form-date'}
-        }
-        formDate.append("file",files[0])
-        Axios.post('/video',formDate,config)
-            .then(response=>{
-            if(response.data.success){
-                console.log(response.data)
-                let variable={
-                    url:response.data.url,
-                    filename:response.data.filename
-                }
-                setFilePath(response.data.url)
-
-                Axios.post('/upload/video/thumbnail',variable)
-                    .then(response=>{
-                        if(response.data.success){
-
-                            setDureation(response.data.fileDuration)
-
-                        }else{
-                            alert('썸네일 업로드 실패!')
-                        }
-                    })
-
-            }else{
-                alert('비디오 업로드 실패')
-            }
-
-        })
-        console.log(files)
-    }
     return (
         <div style={{maxWidth:'700px',margin:'2rem auto'}}>
             <div style={{textAlign:'center',marginButton:'2rem'}}>
-                <Drag id={"drag-1"} className={"drag"} >
-                    <Card id={"card-1"} className={"card"} draggable={"true"}>
-                        <p>카드 한개</p>
-                    </Card>
-                </Drag>
-                <Drag id={"drag-2"} className={"drag"} >
-                    <Card id={"card-2"} className={"card"} draggable={"true"}>
-                        <p>카드 둘</p>
-                    </Card>
-                </Drag>
                 <MDBTypography>
                     업로드 비디오
                 </MDBTypography>
@@ -92,7 +43,8 @@ const VideoUploadPage = () => {
             <div onSubmit>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                     {/*드랍존*/}
-                    <Dropzone onDrop={onDrop} multiple={true} maxSize={10000000}>
+                    <input type="file" className="form-control-file"/>
+                 {/*   <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                         {({getRootProps, getInputProps}) => (
                             <section>
                                 <div {...getRootProps()}>
@@ -101,7 +53,7 @@ const VideoUploadPage = () => {
                                 </div>
                             </section>
                         )}
-                    </Dropzone>
+                    </Dropzone>*/}
                     {/*썸네일존*/}
                     <div>
                         <img src alt/>

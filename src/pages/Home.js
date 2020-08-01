@@ -1,58 +1,40 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import '../assets/css/main.css'
-import VideoUploadPage from "../components/VideoUploadPage";
-import {Main, Notice, Events, Community, Contacts} from '../pages/index'
-import {Navigator, Footer} from "../commons";
-import {GoogleMapClass,Statistics,CustomerInfo,Order,Payment,Mypage} from './CompanyPage'
-import {Login,Signup} from './Account'
+
+import {Main, Contacts, Write} from './index'
+import {Review, Market, Community} from './community/index'
+import {Notice,NoticeDetail} from "./notice/index";
+import {Navigator, Footer} from "../commons/index";
+import Mypage from "./myPage/MyPage";
+import {VideoUploadPage} from "../components";
+
+
 
 const Home = () => {
-    return (
+    return(
         <>
             <Navigator/>
             <Switch>
                 <Route exact path={"/"}>
+
                     <Main/>
-                </Route>
-                <Route path="/googlemapclass" >
-                    <GoogleMapClass/>
-                </Route>
-                <Route path="/login" >
-                    <Login/>
-                </Route>
-                <Route path="/signup" >
-                    <Signup/>
-                </Route>
-                <Route path="/mypage" >
-                    <Mypage/>
 
-                </Route>
-
-                <Route path="/order" >
-                    <Order/>
-                </Route>
-                <Route path="/payment">
-                    <Payment/>
-                </Route>
-                <Route path="/statistics">
-                    <Statistics/>
-                </Route>
-
-                <Route path="/customerinfo">
-                    <CustomerInfo/>
                 </Route>
                 <Route path={"/notice"} component={Notice}/>
-                <Route path={"/events"} component={Events}/>
+                <Route path={"/noticedetail"} component={NoticeDetail}/>
                 <Route path={"/community"} component={Community}/>
+                <Route path={"/review"} component={Review}/>
+                <Route path={"/market"} component={Market}/>
                 <Route path={"/contacts"} component={Contacts}/>
+                <Route path={"/write"} component={Write}/>
+                <Route path={"/my"} component={Mypage}/>
                 <Route path={"/video"} component={VideoUploadPage}/>
-            </Switch>
 
+            </Switch>
             <Footer/>
         </>
-    );
+    )
 }
 
 export default Home;
-

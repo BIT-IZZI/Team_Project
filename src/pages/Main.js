@@ -9,14 +9,10 @@ const Main = () => {
             <main className="masthead">
                 <div className="container">
                     <div className="intro-text">
-                        <div className="intro-lead-in">방 안에서 이사를</div>
-                        <div className="intro-heading text-uppercase">Welcome To IZZI!</div>
-                        <div className="intro-lead-in">방 안에서 이사를</div>
-                        <div className="intro-heading text-uppercase">Welcome To IZZI!</div>
-                        <div className="intro-lead-in">방 안에서 이사를</div>
-                        <div className="intro-heading text-uppercase">Welcome To IZZI!</div>
-                        <div className="intro-lead-in">방 안에서 이사를</div>
-                        <div className="intro-heading text-uppercase">Welcome To IZZI!</div>
+                        <div className="intro-lead-in">이사 견적,</div>
+                        <div className="intro-lead-in">내 방에서 알아보세요!</div>
+                        <br/><br/>
+                        <div className="intro-heading text-uppercase">방문 없이 견적짜는</div><br/><br/>
                         <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../components/Estimate.js">이사하러 가기
                         </a>
                     </div>
