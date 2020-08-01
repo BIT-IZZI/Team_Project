@@ -1,27 +1,52 @@
 import React from 'react';
 
-import {SideBar} from "../../commons/index";
+import {Navigator, SideBar, Footer} from "../../commons/index";
 
 import '../../assets/css/sb-admin-2.css'
 
-const Market = () => {
+const Admin = () => {
     return (
         <>
-            <SideBar/>
+            <nav className="sidebar sidebar-offcanvas">
+                <ul className="nav">
+                    <li className="nav-item nav-category"><h1>Dashboard</h1></li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <span className="menu-title">사용자 관리</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <span className="menu-title">주문 관리</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/charts">
+                            <span className="menu-title">통 계</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <span className="menu-title">일정 관리</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <span className="menu-title">환경 설정</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             <div id="wrapper">
                 <div id="page-wrapper">
                     <div className="row">
                         <div className="col-lg-12"><br/>
-                            <h2 className="page-header">중고 거래</h2><br/>
+                            <h2 className="page-header">관리자 페이지</h2><br/>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="panel panel-default">
-                                {/*<div className="panel-heading">
-                                        <h3>후기</h3>
-                                    </div>*/}
-                                {/* /.panel-heading */}
                                 <div className="panel-body">
                                     <table width="100%" className="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
@@ -85,4 +110,4 @@ const Market = () => {
     );
 };
 
-export default Market;
+export default Admin;

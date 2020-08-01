@@ -9,7 +9,6 @@ import {Navbar} from "react-bootstrap";
 const Review = () => {
     return (
         <>
-            <Navigator/>
             <SideBar/>
             <div id="wrapper">
                 <div id="page-wrapper">
@@ -84,7 +83,6 @@ const Review = () => {
                 </div>
                 {/* /#page-wrapper */}
             </div>
-            <Footer/>
         </>
     );
 };

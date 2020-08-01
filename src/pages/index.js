@@ -1,3 +1,6 @@
-export {default as Contacts} from './Contacts'
 export {default as Main} from './Main'
 export {default as Write} from './Write'
+export {NoticeDetail, Notice} from './notice'
+export {Community,Market,Review} from './community'
+export {Admin, Charts} from './admin'
+export {Contacts} from './contacts'
