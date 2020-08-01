@@ -83,7 +83,6 @@ const Review = () => {
                 </div>
                 {/* /#page-wrapper */}
             </div>
-
         </>
     );
 };

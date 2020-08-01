@@ -1,15 +1,12 @@
 import React from 'react';
 
-import {Navigator, SideBar, Footer} from "../../commons/index";
-import logo from '../../assets/img/logo3.png'
+import {SideBar} from "../../commons/index";
 
 import '../../assets/css/sb-admin-2.css'
-import {Navbar} from "react-bootstrap";
 
 const Market = () => {
     return (
         <>
-
             <SideBar/>
             <div id="wrapper">
                 <div id="page-wrapper">
@@ -84,7 +81,6 @@ const Market = () => {
                 </div>
                 {/* /#page-wrapper */}
             </div>
-
         </>
     );
 };

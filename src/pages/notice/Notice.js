@@ -9,7 +9,6 @@ import {Navbar} from "react-bootstrap";
 const Market = () => {
     return (
         <>
-
             <SideBar/>
                     <div id="wrapper">
                     <div id="page-wrapper">
@@ -85,7 +84,6 @@ const Market = () => {
                 </div>
                 {/* /#page-wrapper */}
             </div>
-
     </>
 );
 };

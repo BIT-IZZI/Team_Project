@@ -5,7 +5,6 @@ import '../assets/css/sb-admin-2.css'
 const Write = () => {
     return (
             <>
-
                     <SideBar/>
                     <div id="wrapper">
                         <div id="page-wrapper">
@@ -46,7 +45,6 @@ const Write = () => {
                             </div>
                         </div>
                         {/* /#page-wrapper */}
-
         </>
     );
 };

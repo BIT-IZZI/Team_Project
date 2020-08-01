@@ -9,7 +9,6 @@ import {Navbar} from "react-bootstrap";
 const Event = () => {
     return (
         <>
-
             <SideBar/>
             <div id="wrapper">
                 <div id="page-wrapper">
@@ -29,7 +28,6 @@ const Event = () => {
                 </div>
                 {/* /#page-wrapper */}
             </div>
-
         </>
     );
 };
