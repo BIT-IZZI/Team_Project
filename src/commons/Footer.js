@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer">
                 <div className="container-fluid clearfix">
                     <span className="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © IZZI 2020 <a href="#" target="_blank">하이퍼링크</a>. All rights reserved.</span>
-                    <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">대충 슬로건 짤<i className="mdi mdi-heart text-danger" /></span>
+                    <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">대충 슬로건 짤</span>
                 </div>
             </footer>
         </>
