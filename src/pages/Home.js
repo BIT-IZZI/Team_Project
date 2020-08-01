@@ -1,71 +1,58 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import '../assets/css/main.css'
-
+import VideoUploadPage from "../components/VideoUploadPage";
 import {Main, Notice, Events, Community, Contacts} from '../pages/index'
-import {Navigator, Footer} from "../commons/index";
-import {CustomerInfo, Mypage, Order, Payment, Statistics,GoogleMapClass} from "./CompanyPage";
-import {Signup,Login} from "./Account";
+import {Navigator, Footer} from "../commons";
+import {GoogleMapClass,Statistics,CustomerInfo,Order,Payment,Mypage} from './CompanyPage'
+import {Login,Signup} from './Account'
 
 const Home = () => {
     return (
-        <BrowserRouter>
-                <Switch>
-                    <Route exact path={"/"}>
-                    <Navigator/>
+        <>
+            <Navigator/>
+            <Switch>
+                <Route exact path={"/"}>
                     <Main/>
-                    <Footer/>
-                    </Route>
-                    <Route path="/googlemapclass" >
-                        <Navigator/>
-                        <GoogleMapClass/>
-                    </Route>
+                </Route>
+                <Route path="/googlemapclass" >
+                    <GoogleMapClass/>
+                </Route>
+                <Route path="/login" >
+                    <Login/>
+                </Route>
+                <Route path="/signup" >
+                    <Signup/>
+                </Route>
+                <Route path="/mypage" >
+                    <Mypage/>
 
+                </Route>
 
-                    <Route path="/login" >
-                        <Navigator/>
-                        <Login/>
-                        <Footer/>
-                    </Route>
+                <Route path="/order" >
+                    <Order/>
+                </Route>
+                <Route path="/payment">
+                    <Payment/>
+                </Route>
+                <Route path="/statistics">
+                    <Statistics/>
+                </Route>
 
-                    <Route path="/signup" >
-                        <Navigator/>
-                        <Signup/>
-                        <Footer/>
-                    </Route>
+                <Route path="/customerinfo">
+                    <CustomerInfo/>
+                </Route>
+                <Route path={"/notice"} component={Notice}/>
+                <Route path={"/events"} component={Events}/>
+                <Route path={"/community"} component={Community}/>
+                <Route path={"/contacts"} component={Contacts}/>
+                <Route path={"/video"} component={VideoUploadPage}/>
+            </Switch>
 
-                      <Route path="/mypage" >
-                        <Navigator/>
-                        <Mypage/>
-                        <Footer/>
-                    </Route>
-
-                    <Route path="/order" >
-                        <Navigator/>
-                        <Order/>
-                    </Route>
-
-                    <Route path="/payment">
-                        <Navigator/>
-                        <Payment/>
-                    </Route>
-
-                     <Route path="/statistics">
-                        <Navigator/>
-                        <Statistics/>
-                    </Route>
-
-                    <Route path="/customerinfo">
-                        <Navigator/>
-                        <CustomerInfo/>
-                    </Route>
-                    <Route path={"/notice"} component={Notice}/>
-                    <Route path={"/events"} component={Events}/>
-                    <Route path={"/community"} component={Community}/>
-                    <Route path={"/contacts"} component={Contacts}/>
-                </Switch>
-        </BrowserRouter>
+            <Footer/>
+        </>
     );
 }
 
 export default Home;
+

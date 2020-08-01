@@ -5,7 +5,6 @@ import {Route} from "react-router-dom";
 const Events = () => {
     return (
         <>
-            <Navigator/>
             <h1>이벤트</h1>
             <Footer/>
         </>
