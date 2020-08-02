@@ -6,7 +6,7 @@ export default function SelectSearchTopReverse() {
     const [datatable, setDatatable] = React.useState({
         columns: [
             {
-                label:  'Name',
+                label:  '이름',
                 field: 'name',
                 width: 150,
                 attributes: {
@@ -15,23 +15,30 @@ export default function SelectSearchTopReverse() {
                 },
             },
             {
-                label: 'Position',
+                label: '거주지',
                 field: 'position',
                 width: 270,
             },
             {
-                label: 'Office',
-                field: 'office',
-                width: 200,
-            },
-            {
-                label: 'Age',
-                field: 'age',
+                label: '희망이사지역',
+                field: 'movingTo',
                 sort: 'asc',
                 width: 100,
             },
             {
-                label: 'Start date',
+                label: '이사 종류',
+                field: 'office',
+                width: 200,
+            },
+            {
+                label: '평수',
+                field: 'age',
+                sort: 'asc',
+                width: 100,
+            },
+
+            {
+                label: '접수 날짜',
                 field: 'date',
                 sort: 'disabled',
                 width: 150,
@@ -45,10 +52,11 @@ export default function SelectSearchTopReverse() {
         ],
         rows: [
             {
-                name:   <Link to="/customerinfo">Tiger Nixon</Link>,
-                position: 'System Architect',
-                office: 'Edinburgh',
-                age: '61',
+                name:   <Link to="/customerinfo">홍두깨</Link>,
+                position: '서울특별시 서대문구 연희동',
+                office: '우리집 이사',
+                movingTo: '경기도 고양시 덕양구 화정동',
+                age: '35',
                 date: '2011/04/25',
                 salary: '$320',
             },
@@ -185,7 +193,7 @@ export default function SelectSearchTopReverse() {
 
     return (
         <div>
-            <h1 className="text-center" style={{padding:'1rem'}}>주문 게시판  </h1>
+            <h1 className="text-center" style={{padding:'1rem'}}>이사 접수 </h1>
 
         <MDBDataTableV5
             // bordered 테두리

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reach/combobox": "^0.10.5",
+    "@react-google-maps/api": "^1.9.9",
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -19,6 +21,7 @@
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
+    "react-daum-postcode": "^1.9.0",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.0.2",
     "react-icons": "^3.10.0",
@@ -32,11 +35,13 @@
     "react-table": "^7.3.2",
     "react-trip-date": "^0.0.3",
     "react-use-qrcode": "^2.0.0",
+    "recharts": "^1.8.5",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.1",
-    "throttle-debounce": "^2.2.1"
+    "throttle-debounce": "^2.2.1",
+    "use-places-autocomplete": "^1.3.10"
   },
   "scripts": {
     "start": "react-scripts start",
