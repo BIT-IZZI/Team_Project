@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
-import {Navigator, SideBar, Footer} from "../../commons";
-import logo from '../../assets/img/logo3.png'
+import { Link } from 'react-router-dom'
+import {SideBar} from "../../commons";
 
 import '../../assets/css/sb-admin-2.css'
-import {Navbar} from "react-bootstrap";
+import {MDBBtn} from "mdbreact";
 
 const Community = () => {
         return (
@@ -14,15 +13,12 @@ const Community = () => {
                     <div id="page-wrapper">
                             <div className="row">
                                     <div className="col-lg-12"><br/>
-                                            <a href="/review"><h2 className="page-header">후기</h2><br/></a>
+                                            <Link to="/review"><h2 className="page-header">후기</h2><br/></Link>
                                     </div>
                             </div>
                             <div className="row">
                                     <div className="col-lg-12">
                                             <div className="panel panel-default">
-                                                    {/*<div className="panel-heading">
-                                <h3>후기</h3>
-                            </div>*/}
                                                     {/* /.panel-heading */}
                                                     <div className="panel-body">
                                                             <table width="100%" className="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -82,7 +78,7 @@ const Community = () => {
                             </div>
                             <div className="row">
                                     <div className="col-lg-12"><br/>
-                                            <a href="/market"><h2 className="page-header">중고 거래</h2><br/></a>
+                                            <Link to="/market"><h2 className="page-header">중고 거래</h2><br/></Link>
                                     </div>
                             </div>
                             <div className="row">
@@ -141,7 +137,6 @@ const Community = () => {
                                                                     </tr>
                                                                     </tbody>
                                                             </table>
-                                                            <a href="/write">글쓰기</a>
                                                     </div>
                                                     {/* /.panel-body */}
                                             </div>

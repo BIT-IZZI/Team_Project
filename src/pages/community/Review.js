@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {Navigator, SideBar, Footer} from "../../commons/index";
-import logo from '../../assets/img/logo3.png'
 
 import '../../assets/css/sb-admin-2.css'
-import {Navbar} from "react-bootstrap";
+import {MDBBtn} from "mdbreact";
+import {Link} from "react-router-dom";
 
 const Review = () => {
     return (
@@ -73,6 +73,7 @@ const Review = () => {
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <Link to="/write"><MDBBtn className="btn blue-gradient">글쓰기</MDBBtn></Link>
                                 </div>
                                 {/* /.panel-body */}
                             </div>

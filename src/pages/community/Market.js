@@ -3,6 +3,8 @@ import React from 'react';
 import {SideBar} from "../../commons/index";
 
 import '../../assets/css/sb-admin-2.css'
+import {Link} from "react-router-dom";
+import {MDBBtn} from "mdbreact";
 
 const Market = () => {
     return (
@@ -71,6 +73,7 @@ const Market = () => {
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <Link to="/write"><MDBBtn className="btn blue-gradient">글쓰기</MDBBtn></Link>
                                 </div>
                                 {/* /.panel-body */}
                             </div>
