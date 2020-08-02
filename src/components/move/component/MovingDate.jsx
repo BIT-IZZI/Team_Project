@@ -1,5 +1,5 @@
 import React, { useState,useReducer} from 'react';
-import {Modal} from 'react-bootstrap'
+import {Modal,Button} from 'react-bootstrap'
 import {MDBBtn, MDBIcon} from "mdbreact";
 import { DatePicker, theme } from 'react-trip-date';
 import {ThemeProvider} from 'styled-components';
@@ -32,29 +32,14 @@ const MovingDate = () => {
     }
     const onClickPickDate=e=>{
         setPickDate(e.target.value)
-       
+
     }
-    const [show, setShow] = useState(false);
     const [Title,setTitle]=useState("")
-    const onClickShow=e=>{
-        setShow(!show)
-    }
     return (
         <>
-            <MDBBtn color="amber"onClick={onClickShow}>
-               이사날짜
-            </MDBBtn>
-            <Modal
-                size={"lg"}
-                show={show}
-                onHide={onClickShow}
-                dialogClassName="modal-90w"
-                aria-labelledby="example-custom-modal-styling-title"
-            >
+            <Modal.Dialog size={"lg"}>
                 <Modal.Header closeButton>
-                    <Modal.Title id="example-custom-modal-styling-title">
-                        이사날짜
-                    </Modal.Title>
+                    <Modal.Title>이사날짜</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div>
@@ -73,12 +58,16 @@ const MovingDate = () => {
                                 dayComponent={Day} //custom day component
                                 titleComponent={Title} // custom title of days
                             />
-                            <MDBBtn href={"/startPoint"}>다음</MDBBtn>
-
                         </ThemeProvider>
                     </div>
                 </Modal.Body>
-            </Modal>
+
+                <Modal.Footer>
+                    <Button href={"/startPoint"} variant="secondary">다음</Button>
+                </Modal.Footer>
+            </Modal.Dialog>
+
+
         </>
     );
 }

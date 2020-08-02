@@ -3,11 +3,12 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import '../assets/css/main.css'
 
 import {Main, Contacts, Write, Review, Market, Community, Notice, NoticeDetail, Admin, Charts} from './index'
-
+import MovingDate from "../components/move/component/MovingDate";
 import {Navigator, Footer} from "../commons/index";
 import { VideoUploadPage} from "../components";
 import MovingType from "../components/move/component/MovingType";
 import {MovingEstimateForm} from "../components/move/component";
+import {MovingStartPoint} from '../components/move/component/movingPoint/index'
 
 const Home = () => {
     return(
@@ -29,6 +30,9 @@ const Home = () => {
                 <Route path={"/video"} component={VideoUploadPage}/>
                 <Route path={"/type"} component={MovingType}/>
                 <Route path={"/estimate"} component={MovingEstimateForm}/>
+                <Route path={"/movingDate"} component={MovingDate}/>
+                <Route path={"/startPoint"} component={MovingStartPoint}/>
+
 
 
             </Switch>

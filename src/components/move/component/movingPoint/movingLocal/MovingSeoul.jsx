@@ -3,7 +3,7 @@ import {Modal} from 'react-bootstrap'
 import {MDBBtn, MDBIcon} from "mdbreact";
 import { Route, BrowserRouter, Switch,Link } from 'react-router-dom'
 import MovingFloor from "../MovingFloor";
-import ModalLink from "react-router-modal/lib/modal_link";
+
 const MovingSeoul= () => {
     const [show, setShow] = useState(false);
     const onClickShow=e=>{
