@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
-import {Form,InputGroup,Button,Col} from 'react-bootstrap'
+import {InputGroup,Card,Form,Button,Col,FormControl} from 'react-bootstrap'
+import {InputItem} from "react-sidebar-ui";
 
 function MovingEstimateForm() {
     const [validated, setValidated] = useState(false);
@@ -16,10 +17,12 @@ function MovingEstimateForm() {
 
     return (
         <>
-            <h1>이사 견적 신청서</h1>
+            <Card border="success" style={{ width: '110rem' }}>
+                <Card.Header> <Card.Title>이사견적 신청서</Card.Title></Card.Header>
+                <Card.Body>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-            <Form.Row>
+            <Form>
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                     <Form.Label>신청인 성함</Form.Label>
                     <Form.Control
@@ -42,25 +45,8 @@ function MovingEstimateForm() {
                         입력란이 비었습니다!
                     </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-                    <Form.Label>Username</Form.Label>
-                    <InputGroup>
-                        <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <Form.Control
-                            type="text"
-                            placeholder="Username"
-                            aria-describedby="inputGroupPrepend"
-                            required
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            입력란이 비었습니다!
-                        </Form.Control.Feedback>
-                    </InputGroup>
-                </Form.Group>
-            </Form.Row>
-            <Form.Row>
+
+
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                     <Form.Label>출발지 정보</Form.Label>
                     <Form.Control type="text" placeholder="출발지 정보" required />
@@ -89,7 +75,44 @@ function MovingEstimateForm() {
                         입력란이 비었습니다!
                     </Form.Control.Feedback>
                 </Form.Group>
-            </Form.Row>
+            </Form>
+            <Form>
+                <Card border="light" style={{ width: '70rem' }}>
+                <Card.Header><Card.Title>이사일은 정하셨나요?</Card.Title></Card.Header>
+                {['movingDate'].map((type) => (
+                    <div key={`custom-${type}`} className="mb-3">
+                        <Form.Check
+                            custom
+                            type={type}
+                            id={`custom-${type}`}
+                            label={`아니요,아직 안정했어요`}
+                        />
+
+                            <Form.Check
+                                custom
+                                type={type}
+                                id={`custom-${type}`}
+                                label={`네 정했습니다.`}
+                            />
+                            <FormControl type={"date"}placeholder="Phone Number" aria-label="네정했습니다" />
+
+                    </div>
+                ))}
+                </Card>
+                <Card border="light" style={{ width: '70rem' }}>
+                    <Card.Header><Card.Title>이사 유형</Card.Title></Card.Header>
+                    <Form.Group controlId="exampleForm.SelectCustomSizeLg">
+                        <Form.Control as="select" size="lg" custom>
+                            <option>우리집이사</option>
+                            <option>사무실이사</option>
+                            <option>보관이사</option>
+                          
+                        </Form.Control>
+                    </Form.Group>
+                </Card>
+
+
+            </Form>
             <div className="mb-3">
                 <Form.File id="formcheck-api-regular">
                     <Form.File.Label>파일을 올려주세요</Form.File.Label>
@@ -105,6 +128,8 @@ function MovingEstimateForm() {
             </Form.Group>
             <Button type="submit">Submit form</Button>
         </Form>
+                </Card.Body>
+            </Card>
             </>
     );
 }
