@@ -1,24 +1,27 @@
 import React from 'react';
 import '../assets/css/main.css'
 import ReactPlayer from "react-player";
+import img from '../assets/img/img.gif'
+
+import {CardDeck,Card} from 'react-bootstrap'
 
 const Main = () => {
 
     return (
-        <div>
+        <>
             <main className="masthead">
-                    <div className="intro-text">
-                        <div className="intro-lead-in">이사 견적,</div>
-                        <div className="intro-lead-in">내 방에서 알아보세요!</div>
-                    </div>
+                <div className="intro-text">
+                    <div className="intro-lead-in">이사 견적,</div>
+                    <div className="intro-lead-in">내 방에서 알아보세요!</div>
+                </div>
             </main>
             <div className="video-bg">
-                    <ReactPlayer
-                        className="video"
-                        url = 'https://www.youtube.com/watch?v=fKBYdv4s20k'
-                        width = '900px'
-                        height = '650px'
-                        playing controls/>
+                <ReactPlayer
+                    className="video"
+                    url = 'https://www.youtube.com/watch?v=fKBYdv4s20k'
+                    width = '900px'
+                    height = '650px'
+                    playing controls/>
             </div>
             <main className="masthead">
                 <div className="intro-text">
@@ -27,8 +30,55 @@ const Main = () => {
                     </a>
                 </div>
             </main>
+            <main className="masthead">
+                <div className="intro-text">
+                    <div className="intro-heading text-uppercase">후기 및 사례</div>
+                </div>
 
-        </div>
+                <CardDeck className="mainCard" >
+                    <Card>
+                        <Card.Img variant="top" src={img} />
+                        <Card.Body>
+                            <Card.Title>정혜원 님</Card.Title>
+                            <Card.Text>
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src={img} />
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This card has supporting text below as a natural lead-in to additional
+                                content.{' '}
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src={img} />
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to
+                                show that equal height action.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                </CardDeck>
+            </main>
+        </>
     );
 };
 
