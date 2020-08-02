@@ -5,6 +5,9 @@ import '../assets/css/main.css'
 import {Main, Contacts, Write, Review, Market, Community, Notice, NoticeDetail, Admin, Charts} from './index'
 
 import {Navigator, Footer} from "../commons/index";
+import { VideoUploadPage} from "../components";
+import MovingType from "../components/move/component/MovingType";
+import {MovingEstimateForm} from "../components/move/component";
 
 const Home = () => {
     return(
@@ -23,6 +26,11 @@ const Home = () => {
                 <Route path={"/admin"} component={Admin}/>
                 <Route path={"/charts"} component={Charts}/>
                 <Route path={"/write"} component={Write}/>
+                <Route path={"/video"} component={VideoUploadPage}/>
+                <Route path={"/type"} component={MovingType}/>
+                <Route path={"/estimate"} component={MovingEstimateForm}/>
+
+
             </Switch>
             <Footer/>
         </>
