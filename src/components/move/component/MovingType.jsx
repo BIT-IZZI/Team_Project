@@ -40,14 +40,11 @@ const MovingType = (props) => {
     const [showEnd, setShowEnd] = useState(false)
     const [showKind, setShowKind] = useState(false)
 
-    const onClickType = e => {
+    const onClickType= e => {
         e.preventDefault()
-        setShowDate(false)
-        setShowType(false)
-        setShowStart(false)
-        setShowLocal(false)
-        setShowKind(!showKind)
-        setShowEnd(false)
+
+        setShowType(!showType)
+
     }
     const onClickDate = e => {
         e.preventDefault()
@@ -170,8 +167,8 @@ const MovingType = (props) => {
                 dialogClassName="modal-90w"
                 aria-labelledby="example-custom-modal-styling-title"
             >
-                {onClickType &&
-                <div>
+                {showType &&
+                <div >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
                             이사종류
@@ -234,63 +231,35 @@ const MovingType = (props) => {
                     </Modal.Body>
                 </div>
                 }
-                {/*이사날짜*/}
-                {onClickDate &&
-                <>
+                {!showType &&
+
+                    <div>
                     <Modal.Header closeButton>
-                        <Modal.Title>이사날짜</Modal.Title>
+                    <Modal.Title>이사날짜</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <ThemeProvider theme={theme}>
-                            <DatePicker
-                                pickDate={pickDate}
-                                onClick={onClickPickDate}
-                                handleChange={onChangeDate}
-                                selectedDays={""} //initial selected days
-                                numberOfMonths={2}
-                                numberOfSelectableDays={2} // number of days you need
-                                disabledDays={""} //disabeld days
-                                responsive={handleResponsive} // custom responsive, when using it, `numberOfMonths` props not working
-                                disabledBeforToday={true}
-                                disabled={false} // disable calendar
-                                dayComponent={Day} //custom day component
-                                titleComponent={Title} // custom title of days
-                            />
-                        </ThemeProvider>
+                    <ThemeProvider theme={theme}>
+                    <DatePicker
+                    pickDate={pickDate}
+                    onClick={onClickPickDate}
+                    handleChange={onChangeDate}
+                    selectedDays={""} //initial selected days
+                    numberOfMonths={2}
+                    numberOfSelectableDays={2} // number of days you need
+                    disabledDays={""} //disabeld days
+                    responsive={handleResponsive} // custom responsive, when using it, `numberOfMonths` props not working
+                    disabledBeforToday={true}
+                    disabled={false} // disable calendar
+                    dayComponent={Day} //custom day component
+                    titleComponent={Title} // custom title of days
+                    />
+                    </ThemeProvider>
 
                     </Modal.Body>
-                </>
-                }
-                {
-
-                    <>
-                        <Modal.Header>
-                            <Modal.Title id="example-custom-modal-styling-title">출발지역</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <a className="list">
-                                <Link to='/moving/seoul' component={MovingSeoul} onClick={show}>서울</Link>
-                                <Link to={"/moving/gyeonggi"} component={MovingGyeonggi}>경기</Link>
-                                <Link to={"/moving/incheon"} component={MovingIncheon}>인천</Link>
-                                <Link to={"/moving/daejeon"} component={MovingDaejeon}>대전</Link>
-                                <Link to={"/moving/gwangju"} component={MovingGwangju}>광주</Link>
-                                <Link to={"/moving/daegu"} component={MovingDaegu}>대구</Link>
-                                <Link to={"/moving/busan"} component={MovingBusan}>부산</Link>
-                                <Link to={"/moving/ulsan"} component={MovingUlsan}>울산</Link>
-                                <Link to={"/moving/chungbuk"} component={MovingChungbuk}>충북</Link>
-                                <Link to={"/moving/chungnam"} component={MovingChungnam}>충남</Link>
-                                <Link to={"/moving/jeonbuk"} component={MovingJeonbuk}>전북</Link>
-                                <Link to={"/moving/jeonnam"} component={MovingJeonnam}>전남</Link>
-                                <Link to={"/moving/gyeongbuk"} component={MovingGyeongbuk}>경북</Link>
-                                <Link to={"/moving/gyeongnam"} component={MovingGyeongnam}>경남</Link>
-                                <Link to={"/moving/gangwon"} component={MovingGangwon}>강원</Link>
-                                <Link to={"/moving/jeju"} component={MovingJeju}>제주</Link>
-                                <Link to={"/moving/sejong"} component={MovingSejong}>세종</Link>
-                            </a>
-                        </Modal.Body>
-                    </>
+                    </div>
 
                 }
+
 
                 <Modal.Footer>
                     <Button href={"/startPoint"} variant="secondary">다음</Button>
