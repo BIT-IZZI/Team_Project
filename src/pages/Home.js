@@ -12,6 +12,7 @@ import {MovingStartPoint} from '../components/move/component/movingPoint/index'
 import {CustomerInfo, Mypage, Order, Payment, Statistics} from "./CompanyPage";
 import {Signup, Login} from "./Account";
 import ModalTest from "../components/modalTest/ModalTest";
+import VideoTest from "../components/videoUpload/VideoTest";
 
 const Home = () => {
     return (
@@ -46,6 +47,7 @@ const Home = () => {
                 <Route path={"/community"} component={Community}/>
                 <Route path={"/contacts"} component={Contacts}/>
                 <Route path={"/test"} component={ModalTest}/>
+                <Route path={"/videotest"} component={VideoTest}/>
             </Switch>
             <Footer/>
         </>

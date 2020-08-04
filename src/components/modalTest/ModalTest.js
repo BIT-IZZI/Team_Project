@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import {MDBCol, MDBMask, MDBRow, MDBView} from "mdbreact";
 import {ThemeProvider} from "styled-components";
 import {DatePicker, theme} from "react-trip-date";
-import {Link} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import {
     MovingBusan, MovingChungbuk, MovingChungnam,
     MovingDaegu,
@@ -13,7 +13,7 @@ import {
     MovingIncheon, MovingJeju, MovingJeonbuk, MovingJeonnam, MovingSejong,
     MovingSeoul, MovingUlsan
 } from "../move/component/movingPoint/movingLocal";
-import {MovingEndPoint} from "../move/component/movingPoint";
+import {MovingEndPoint, MovingStartPoint} from "../move/component/movingPoint";
 
 
 const handleResponsive = setNumberOfMonth => {
@@ -35,7 +35,10 @@ const Day = ({day}) => {
 };
 
 const ModalTest = ({ modalPage, show, handleClose, handlePage }) => {
-
+    const [showw, setShow] = useState(false);
+    const onClickShow=e=>{
+        setShow(!showw)
+    }
     const [pickDate, setPickDate] = useState('')
     const onChangeDate = date => {
         console.log(date)
@@ -144,31 +147,30 @@ const ModalTest = ({ modalPage, show, handleClose, handlePage }) => {
                         </Modal.Footer></div>
                     }
                     {(modalPage === 3) &&
-                    <div>
+                    <div onClick={onClickShow}>
                         <Modal.Header closeButton>
-                        <Modal.Title id="example-custom-modal-styling-title">출발지역</Modal.Title>
-                    </Modal.Header>
+                            <Modal.Title id="example-custom-modal-styling-title">출발지역</Modal.Title>
+                        </Modal.Header>
 
                         <Modal.Body>
                             <a className="list">
-                                <MovingSeoul/>
-                                <a component={MovingSeoul} >서울</a>
-                                <a component={MovingGyeonggi}>경기</a>
-                                <a component={MovingIncheon}>인천</a>
-                                <a component={MovingDaejeon}>대전</a>
-                                <a component={MovingGwangju}>광주</a>
-                                <a component={MovingDaegu}>대구</a>
-                                <a component={MovingBusan}>부산</a>
-                                <a component={MovingUlsan}>울산</a>
-                                <a component={MovingChungbuk}>충북</a>
-                                <a component={MovingChungnam}>충남</a>
-                                <a component={MovingJeonbuk}>전북</a>
-                                <a component={MovingJeonnam}>전남</a>
-                                <a component={MovingGyeongbuk}>경북</a>
-                                <a component={MovingGyeongnam}>경남</a>
-                                <a component={MovingGangwon}>강원</a>
-                                <a component={MovingJeju}>제주</a>
-                                <a component={MovingSejong}>세종</a>
+                                <Link to='/moving/seoul' component={MovingSeoul} >서울</Link>
+                                <Link to={"/moving/gyeonggi"} component={MovingGyeonggi}>경기</Link>
+                                <Link to={"/moving/incheon"} component={MovingIncheon}>인천</Link>
+                                <Link to={"/moving/daejeon"} component={MovingDaejeon}>대전</Link>
+                                <Link to={"/moving/gwangju"} component={MovingGwangju}>광주</Link>
+                                <Link to={"/moving/daegu"} component={MovingDaegu}>대구</Link>
+                                <Link to={"/moving/busan"} component={MovingBusan}>부산</Link>
+                                <Link to={"/moving/ulsan"} component={MovingUlsan}>울산</Link>
+                                <Link to={"/moving/chungbuk"} component={MovingChungbuk}>충북</Link>
+                                <Link to={"/moving/chungnam"} component={MovingChungnam}>충남</Link>
+                                <Link to={"/moving/jeonbuk"} component={MovingJeonbuk}>전북</Link>
+                                <Link to={"/moving/jeonnam"} component={MovingJeonnam}>전남</Link>
+                                <Link to={"/moving/gyeongbuk"} component={MovingGyeongbuk}>경북</Link>
+                                <Link to={"/moving/gyeongnam"} component={MovingGyeongnam}>경남</Link>
+                                <Link to={"/moving/gangwon"} component={MovingGangwon}>강원</Link>
+                                <Link to={"/moving/jeju"} component={MovingJeju}>제주</Link>
+                                <Link to={"/moving/sejong"} component={MovingSejong}>세종</Link>
                             </a>
                         </Modal.Body>
                         <Modal.Footer>

@@ -41,8 +41,6 @@ const MovingDate = () => {
     }
     return (
         <>
-
-
                 <Modal.Header closeButton>
                     <Modal.Title>이사날짜</Modal.Title>
                 </Modal.Header>
@@ -70,8 +68,6 @@ const MovingDate = () => {
                 <Modal.Footer>
                     <Button href={"/startPoint"} variant="secondary">다음</Button>
                 </Modal.Footer>
-
-
 
         </>
     );

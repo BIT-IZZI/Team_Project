@@ -16,26 +16,10 @@ import {
 } from "./movingPoint/movingLocal";
 import Test from "../../modalTest/Test";
 import ModalTest from "../../modalTest/ModalTest";
-/*달력*/
-const handleResponsive = setNumberOfMonth => {
-    let width = document.querySelector('.tp-calendar').clientWidth;
-    if (width > 900) {
-        setNumberOfMonth(3);
-    } else if (width < 900 && width > 580) {
-        setNumberOfMonth(2);
-    } else if (width < 580) {
-        setNumberOfMonth(1);
-    }
-};
-const Day = ({day}) => {
-    return (
-        <>
-            <p className="date">{day.format('DD')}</p>
-        </>
-    );
-};
-const MovingType = (props) => {
-    const [show, setShow] = useState(false);
+
+
+const MovingType = () => {
+    const [showw, setShow] = useState(false);
     const [modalPage, setModalPage] = useState(1);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -48,7 +32,7 @@ const MovingType = (props) => {
         }
     }
 
-    const [Title, setTitle] = useState("")
+
 
     return (
         <>
@@ -107,7 +91,7 @@ const MovingType = (props) => {
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
-            <ModalTest modalPage={modalPage} show={show} handleClose={handleClose} handlePage={handlePage} />
+            <ModalTest modalPage={modalPage} show={showw} handleClose={handleClose} handlePage={handlePage} />
             <MDBBtn color="amber" onClick={handlePage}>
                 무료 견적 신청하기
             </MDBBtn><br/>
