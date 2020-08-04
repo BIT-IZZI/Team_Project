@@ -23,7 +23,7 @@ const MovingSeoul= () => {
             <Modal className={"modal"}
                 size={"lg"}
                 show={show}
-                   onHide={onClickShow}
+                   onHide={setShow(false)}
                 dialogClassName="modal-90w"
                 aria-labelledby="example-custom-modal-styling-title"
             >
@@ -33,14 +33,12 @@ const MovingSeoul= () => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
-                    <BrowserRouter>
+
                         <Switch>
                      <a className="list">
-                         <Link to='/moving/seoul' component={MovingFloor} >서울</Link>
-                         <MDBBtn component={MovingFloor} onClick={onClickBtn}> 강남구</MDBBtn>
-
-                        <MDBBtn className={"kangdong"} onClick="str_zipcode_gubun('서울강동구')" onClick={onClickBtn}>강동구</MDBBtn>
-                        <MDBBtn onClick="str_zipcode_gubun('서울강북구')" onClick={onClickBtn}>강북구</MDBBtn>
+                         <MDBBtn component={MovingFloor} onClick={()=>setShow(false)}> 강남구</MDBBtn>
+                        <MDBBtn onClick={()=>setShow(false)}>강동구</MDBBtn>
+                        <MDBBtn onClick={()=>setShow(false)}>강북구</MDBBtn>
                         <MDBBtn onClick="str_zipcode_gubun('서울강서구')">강서구</MDBBtn>
                         <MDBBtn onClick="str_zipcode_gubun('서울관악구')">관악구</MDBBtn>
                         <MDBBtn onClick="str_zipcode_gubun('서울광진구')">광진구</MDBBtn>
@@ -65,7 +63,7 @@ const MovingSeoul= () => {
                         <MDBBtn onClick="str_zipcode_gubun('서울중랑구')">중랑구</MDBBtn>
                     </a>
                         </Switch>
-                    </BrowserRouter>
+
                 </Modal.Body>
             </Modal>
         </>

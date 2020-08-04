@@ -1,6 +1,6 @@
 import React, { useState,useReducer} from 'react';
 import {Modal,Button} from 'react-bootstrap'
-import {MDBBtn, MDBIcon} from "mdbreact";
+
 import { DatePicker, theme } from 'react-trip-date';
 import {ThemeProvider} from 'styled-components';
 import './MovingType.css'
@@ -35,14 +35,19 @@ const MovingDate = () => {
 
     }
     const [Title,setTitle]=useState("")
+    const [show, setShow] = useState(false);
+    const onClickShow = e => {
+        setShow(!show)
+    }
     return (
         <>
-            <Modal.Dialog size={"lg"}>
+
+
                 <Modal.Header closeButton>
                     <Modal.Title>이사날짜</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div>
+
                         <ThemeProvider theme={theme}>
                             <DatePicker
                                 pickDate={pickDate}
@@ -59,13 +64,13 @@ const MovingDate = () => {
                                 titleComponent={Title} // custom title of days
                             />
                         </ThemeProvider>
-                    </div>
+
                 </Modal.Body>
 
                 <Modal.Footer>
                     <Button href={"/startPoint"} variant="secondary">다음</Button>
                 </Modal.Footer>
-            </Modal.Dialog>
+
 
 
         </>

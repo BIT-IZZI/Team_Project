@@ -1,20 +1,20 @@
 import React from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import '../assets/css/main.css'
 
 import {Main, Contacts, Write, Review, Market, Community, Notice, NoticeDetail, Admin, Charts} from './index'
 import MovingDate from "../components/move/component/MovingDate";
 import {Navigator, Footer} from "../commons/index";
-import { VideoUploadPage} from "../components";
+import {VideoUploadPage} from "../components";
 import MovingType from "../components/move/component/MovingType";
 import {MovingEstimateForm} from "../components/move/component";
 import {MovingStartPoint} from '../components/move/component/movingPoint/index'
+import {CustomerInfo, Mypage, Order, Payment, Statistics} from "./CompanyPage";
+import {Signup, Login} from "./Account";
+import ModalTest from "../components/modalTest/ModalTest";
 
-
-import {CustomerInfo, Mypage, Order, Payment, Statistics,GoogleMapClass} from "./CompanyPage";
-import {Signup,Login} from "./Account";
 const Home = () => {
-    return(
+    return (
         <>
             <Navigator/>
             <Switch>
@@ -35,48 +35,17 @@ const Home = () => {
                 <Route path={"/estimate"} component={MovingEstimateForm}/>
                 <Route path={"/movingDate"} component={MovingDate}/>
                 <Route path={"/startPoint"} component={MovingStartPoint}/>
-
-                <Route path="/login" >
-
-                    <Login/>
-
-                </Route>
-
-                <Route path="/signup" >
-
-                    <Signup/>
-
-                </Route>
-
-                <Route path="/mypage" >
-
-                    <Mypage/>
-
-                </Route>
-
-                <Route path="/order" >
-
-                    <Order/>
-                </Route>
-
-                <Route path="/payment">
-
-                    <Payment/>
-                </Route>
-
-                <Route path="/statistics">
-
-                    <Statistics/>
-                </Route>
-
-                <Route path="/customerinfo">
-                    <CustomerInfo/>
-                </Route>
+                <Route path="/login" component={Login}/>
+                <Route path="/signup" component={Signup}/>
+                <Route path="/mypage" component={Mypage}/>
+                <Route path="/order" component={Order}/>
+                <Route path="/payment" component={Payment}/>
+                <Route path="/statistics" component={Statistics}/>
+                <Route path="/customerinfo" component={CustomerInfo}/>
                 <Route path={"/notice"} component={Notice}/>
                 <Route path={"/community"} component={Community}/>
                 <Route path={"/contacts"} component={Contacts}/>
-
-
+                <Route path={"/test"} component={ModalTest}/>
             </Switch>
             <Footer/>
         </>
