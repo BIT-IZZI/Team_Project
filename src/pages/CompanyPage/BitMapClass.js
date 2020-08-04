@@ -14,7 +14,7 @@ class Map extends React.Component  {
     componentDidMount() {
         // Creates new map instance
         const map = new mapboxgl.Map({
-            container: this.mapWrapper, // Container ID
+            container: mapWrapper, // Container ID
             style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
             center: [126.886020,37.553818], // Starting position [lng, lat]
             zoom:13 // Starting zoom level
@@ -155,7 +155,7 @@ class Map extends React.Component  {
             // Populates map by referencing map's container property
             <>
                 <div
-                    ref={el => (this.mapWrapper = el)}
+                    ref={el => (mapWrapper = el)}
                     className="mapWrapper"
                 />
             </>
