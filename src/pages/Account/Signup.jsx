@@ -53,6 +53,7 @@ const Signup = () => {
                                         value={name}
                                         onChange={e=>setName(e.target.value)}
                                     />
+
                                     <MDBInput
                                         label="주소를 입력해주세요."
                                         group

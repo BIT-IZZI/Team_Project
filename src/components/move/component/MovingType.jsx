@@ -37,7 +37,7 @@ const MovingType = () => {
     return (
         <>
             <MDBContainer>
-
+                <ModalTest modalPage={modalPage} show={showw} handleClose={handleClose} handlePage={handlePage} />
                 <MDBRow>
                     <MDBCol md="3">
                         <MDBView hover zoom onClick={handleShow}>
@@ -91,7 +91,7 @@ const MovingType = () => {
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
-            <ModalTest modalPage={modalPage} show={showw} handleClose={handleClose} handlePage={handlePage} />
+
             <MDBBtn color="amber" onClick={handlePage}>
                 무료 견적 신청하기
             </MDBBtn><br/>

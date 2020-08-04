@@ -4,7 +4,8 @@ import ReactPlayer from "react-player";
 import img from '../assets/img/img.gif'
 import {CardDeck,Card} from 'react-bootstrap'
 import {Weather} from './index'
-
+import {MDBBtn} from 'mdbreact'
+import {Link} from 'react-router-dom'
 const Main = () => {
 
     return (
@@ -28,8 +29,8 @@ const Main = () => {
             <main className="masthead">
                 <div className="intro-text">
                     <div className="intro-heading text-uppercase">방문 없이 견적짜는</div><br/>
-                    <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../components/Move.js">이사하러 가기
-                    </a>
+                    <MDBBtn color="amber" className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" ><Link to={"/type"}>이사하러 가기</Link>
+                    </MDBBtn>
                 </div>
             </main>
             <main className="masthead">

@@ -51,7 +51,7 @@ const Reports = () => {
                                     </form>
 
                                     <div className="contact100-more">
-                                        Contact our 24/7 call center: <span className="contact100-more-highlight">+001 345 6889</span>
+                                        Contact our  IZZI call center: <span className="contact100-more-highlight">02-BIT-1004</span>
                                     </div>
                                 </div>
                             <div id="dropDownSelect1"></div>

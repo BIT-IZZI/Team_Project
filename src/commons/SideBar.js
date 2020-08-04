@@ -9,8 +9,8 @@ const SideBar = () => {
             <ul className="nav">
                 <li className="nav-item nav-category"><h1>게시판</h1></li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        <span className="menu-title">전체 글 보기</span>
+                    <a className="nav-link" href="/myinfo">
+                        <span className="menu-title">개인 정보 수정</span>
                     </a>
                 </li>
                 <li className="nav-item">
@@ -24,8 +24,8 @@ const SideBar = () => {
                     </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        <span className="menu-title">생활 정보</span>
+                    <a className="nav-link" href="/videocommunity">
+                        <span className="menu-title">내방 견적 의뢰</span>
                     </a>
                 </li>
                 <li className="nav-item">

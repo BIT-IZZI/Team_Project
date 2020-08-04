@@ -66,7 +66,7 @@ const MovingDate = () => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button href={"/startPoint"} variant="secondary">다음</Button>
+                    <Button href={"/estimate"} variant="secondary">다음</Button>
                 </Modal.Footer>
 
         </>

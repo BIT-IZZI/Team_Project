@@ -143,10 +143,10 @@ const ModalTest = ({ modalPage, show, handleClose, handlePage }) => {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={handlePage}>다음</Button>
+                            <Link to={"/estimate"}>  <Button variant="secondary" >다음</Button></Link>
                         </Modal.Footer></div>
                     }
-                    {(modalPage === 3) &&
+                    {/*{(modalPage === 3) &&
                     <div onClick={onClickShow}>
                         <Modal.Header closeButton>
                             <Modal.Title id="example-custom-modal-styling-title">출발지역</Modal.Title>
@@ -180,7 +180,7 @@ const ModalTest = ({ modalPage, show, handleClose, handlePage }) => {
                     }
                     {(modalPage === 4) &&
                     <h1>dkdk</h1>
-                    }
+                    }*/}
 
                 </Modal.Body>
             </Modal>

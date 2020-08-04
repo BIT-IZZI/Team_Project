@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
-import {InputGroup,Card,Form,Button,Col,FormControl} from 'react-bootstrap'
-import {InputItem} from "react-sidebar-ui";
+import {Card,Form,Button,Col,FormControl} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
+import {SideBar} from "../../../commons";
 
 function MovingEstimateForm() {
     const [validated, setValidated] = useState(false);
@@ -17,8 +18,11 @@ function MovingEstimateForm() {
 
     return (
         <>
+        <div>
+
             <Card border="success" style={{ width: '110rem' }}>
-                <Card.Header> <Card.Title>이사견적 신청서</Card.Title></Card.Header>
+
+                <Card.Header> <Card.Title>1단계. 이사견적 신청서</Card.Title></Card.Header>
                 <Card.Body>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
@@ -49,7 +53,7 @@ function MovingEstimateForm() {
 
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                     <Form.Label>출발지 정보</Form.Label>
-                    <Form.Control type="text" placeholder="출발지 정보" required />
+                    <Form.Control type="text" placeholder="인천 연수구" required />
                     <Form.Control.Feedback type="invalid">
                         입력란이 비었습니다!
                     </Form.Control.Feedback>
@@ -63,7 +67,7 @@ function MovingEstimateForm() {
                 </Form.Group>
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                     <Form.Label>도착지 정보</Form.Label>
-                    <Form.Control type="text" placeholder="도착지 정보" required />
+                    <Form.Control type="text" placeholder="서울 영등포" required />
                     <Form.Control.Feedback type="invalid">
                         입력란이 비었습니다!
                     </Form.Control.Feedback>
@@ -114,22 +118,19 @@ function MovingEstimateForm() {
 
             </Form>
             <div className="mb-3">
-                <Form.File id="formcheck-api-regular">
-                    <Form.File.Label>파일을 올려주세요</Form.File.Label>
-                    <Form.File.Input />
-                </Form.File>
             </div>
             <Form.Group>
                 <Form.Check
                     required
-                    label="Agree to terms and conditions"
+                    label="개인정보 제공에 동의합니다."
                     feedback="You must agree before submitting."
                 />
             </Form.Group>
-            <Button type="submit">Submit form</Button>
+            <Link to={"/video"}>  <Button type="submit">Submit form</Button></Link>
         </Form>
                 </Card.Body>
             </Card>
+        </div>
             </>
     );
 }

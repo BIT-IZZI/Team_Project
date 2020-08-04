@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 
-import {MDBBtn, MDBIcon, MDBTypography} from 'mdbreact'
+import {MDBBtn, MDBCol, MDBCard, MDBCardBody, MDBInput,MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from 'mdbreact'
 import { Upload, message, Button } from 'antd';
 import QRcode from '../assets/img/QRcode.png'
 import {Modal} from "react-bootstrap";
+import {SideBar} from "../commons";
 const PrivateOptions=[
     {value:0,label:"Private"},
     {value:1,label:"Public"},
@@ -57,46 +58,71 @@ const VideoUploadPage = () => {
         setCategory(e.currentTarget.value)
     }
     return (
+        <>
+            <SideBar/>
         <div style={{maxWidth:'700px',margin:'2rem auto'}}>
             <div style={{textAlign:'center',marginButton:'2rem'}}>
-                <h1>비디오 올리기</h1>
+                <h1>2단계 .비디오 올리기</h1>
             </div>
             <div>
-                <Upload {...props}>
-                    <Button type={"file"}>
-                        Click to Upload
-                    </Button>
-                </Upload>
+                <MDBCol>
+                    <MDBCard style={{ width: "100%" ,height:"100px"}}>
+                        <MDBCardBody>
+                            <Upload {...props}>
+                                <Button type={"file"}>
+                                    Click to Upload
+                                </Button>
+                            </Upload>
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
+
             </div>
             <div onSubmit>
                 <br/>
                 <br/>
-                <label>타이틀</label>
-                <input onChange={onChangeTitle} value={videoTitle}/>
+                <MDBInput label={"제목"}  onChange={onChangeTitle} value={videoTitle} placeholder={"   원룸입니다."}/>
                 <br/>
                 <br/>
-                <label>방 설명</label>
-                <textarea onChange={onChangeDescription} value={description}/>
-                <br/>
-                <br/>
-                <label>공개여부</label>
+                <MDBInput label={"방설명"} onChange={onChangeDescription} value={description} placeholder={"   집안에 짐이 많고..."}/>
+                <MDBDropdown>
+                    <MDBDropdownToggle nav caret color="success">
+                        공개여부
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu color="success">
+                        <MDBDropdownItem>비공개</MDBDropdownItem>
+                        <MDBDropdownItem>공개</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                </MDBDropdown>
+                <MDBDropdown>
+                    <MDBDropdownToggle nav caret color="success">
+                        방구분
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu color="success">
+                        <MDBDropdownItem>안방</MDBDropdownItem>
+                        <MDBDropdownItem>거실</MDBDropdownItem>
+                        <MDBDropdownItem>작은방</MDBDropdownItem>
+                        <MDBDropdownItem>화장실</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                </MDBDropdown>
+              {/*  <label>공개여부</label>
                 <select onChange={onChangePrivates}>
                     {PrivateOptions.map((item,index)=>(
                         <option key={index} value={item.value}>{item.label}</option>
                     ))}
-                </select>
+                </select>*/}
 
-                <a>방 구분</a>
+             {/*   <a>방 구분</a>
                 <select onChange={onChangeCategory}>
                     {CategoryOptions.map((item,index)=>(
                         <option key={index} value={item.value}>{item.label}</option>
                     ))}
-                </select>
+                </select>*/}
                 <br/>
                 <br/>
                 <Button  onClick={onClickShow}>
-                    어플
-                    <Modal show={show} size={"lg"}
+                    어플다운받기
+                    <Modal show={show} size={"sm"}
                     onClick={onClickShow}
                     onHide={()=>false}>
                         <img src={QRcode}/>
@@ -107,6 +133,7 @@ const VideoUploadPage = () => {
                 </MDBBtn>
             </div>
         </div>
+            </>
     );
 };
 

@@ -8,9 +8,9 @@ const Mypage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <h2 className="section-heading text-uppercase">짐싸 회원님의 My Page</h2>
+                            <h2 className="section-heading text-uppercase">IZZI 업체의 My Page</h2>
                             <h3 className="section-heading">
-                                사업장 짐싸님께서는 최근 매출 100원입니다.<br/> 36개월동안 매출 금액( 100,000원) </h3><br/><br/><br/>
+                                사업장 IZZI 님께서는 최근 매출 100원입니다.<br/> 36개월동안 매출 금액( 100,000원) </h3><br/><br/><br/>
                         </div>
                     </div>
                     <div className="row text-center">

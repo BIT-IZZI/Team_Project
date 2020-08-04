@@ -99,7 +99,7 @@ const Community = () => {
                                                                     </thead>
                                                                     <tbody>
                                                                     <tr className="odd gradeX">
-                                                                            <td>원형 식탁 판매합니다!</td>
+                                                                            <td><Link to={"/info"}>원형 식탁 판매합니다!</Link></td>
                                                                             <td>문강태</td>
                                                                             <td>2020/08/02</td>
                                                                             <td className="center">4</td>

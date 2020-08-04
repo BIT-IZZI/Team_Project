@@ -53,9 +53,9 @@ export default function SelectSearchTopReverse() {
         rows: [
             {
                 name:   <Link to="/customerinfo">홍두깨</Link>,
-                position: '서울특별시 서대문구 연희동',
+                position:<Link to="/customerinfo"> '서울특별시 서대문구 연희동'</Link>,
                 office: '우리집 이사',
-                movingTo: '경기도 고양시 덕양구 화정동',
+                movingTo: <Link to="/customerinfo">'경기도 고양시 덕양구 화정동'</Link>,
                 age: '35',
                 date: '2011/04/25',
                 salary: '$320',

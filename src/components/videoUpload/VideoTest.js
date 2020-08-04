@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player'
 import Duration from './Duration'
-import {MDBInput} from 'mdbreact'
-
+import {MDBBtn, MDBInput,MDBCol,MDBCardImage,MDBCard,MDBCardBody,MDBCardTitle,MDBCardText} from 'mdbreact'
+import {SideBar} from "../../commons";
+import {Link} from 'react-router-dom'
 
 const VideoTest = () => {
    const [state,setState]=useState("")
@@ -93,32 +94,6 @@ const VideoTest = () => {
 
     return (
         <div>
-            <ReactPlayer  ref={playerref}
-                          className='react-player'
-                          width='1000px'
-                          height='500px'
-                          url={"https://youtu.be/NgHu-hnW8KQ"}
-                          pip={pip}
-                          playing={playing}
-                          controls={controls}
-                          light={light}
-                          loop={loop}
-                          playbackRate={playbackRate}
-                          volume={volume}
-                          muted={muted}
-                          onReady={() => console.log('onReady')}
-                          onStart={() => console.log('onStart')}
-                          onPlay={handlePlay}
-                          onEnablePIP={handleEnablePIP}
-                          onDisablePIP={handleDisablePIP}
-                          onPause={handlePause}
-                          onBuffer={() => console.log('onBuffer')}
-                          onSeek={e => console.log('onSeek', e)}
-                          onEnded={handleEnded}
-                          onError={e => console.log('onError', e)}
-                          onProgress={handleProgress}
-                          onDuration={handleDuration} />
-
 
             <table>
           {/*      <tr>
@@ -129,18 +104,7 @@ const VideoTest = () => {
                     </td>
                 </tr>*/}
                 <tbody>
-                <tr>
-                    <th>재생 버튼</th>
-                    <td>
 
-                        <button onClick={handlePlayPause}>{playing ? '일시정지' : '재생시작'}</button>
-
-                        {light &&
-                        <button onClick={() => player.showPreview()}>Show preview</button>}
-                        {ReactPlayer.canEnablePIP(url) &&
-                        <button onClick={handleTogglePIP}>{pip ? 'Disable PiP' : 'Enable PiP'}</button>}
-                    </td>
-                </tr>
               {/*  <tr>
                     <th>Speed</th>
                     <td>
@@ -190,32 +154,73 @@ const VideoTest = () => {
             </table>
 
 
-            <table>
-                <tbody>
-              {/*  <tr>
+
+            <SideBar/>
+            <div id="wrapper">
+            <div id="page-wrapper">
+            <div className="row">
+            <div className="col-lg-12"><br/>
+            <h2 className="page-header">내 방 영상</h2><br/>
+            </div>
+            </div>
+            <div className="row">
+            <div className="col-lg-12">
+            <div className="panel panel-default">
+                <MDBCol style={{ maxWidth: "100rem" }}>
+                    <MDBCard>
+                        <ReactPlayer  ref={playerref}
+                                      className='react-player'
+                                      width='900px'
+                                      height={'500px'}
+                                      url={"https://youtu.be/NgHu-hnW8KQ"}
+                                      pip={pip}
+                                      playing={playing}
+                                      controls={controls}
+                                      light={light}
+                                      loop={loop}
+                                      playbackRate={playbackRate}
+                                      volume={volume}
+                                      muted={muted}
+                                      onReady={() => console.log('onReady')}
+                                      onStart={() => console.log('onStart')}
+                                      onPlay={handlePlay}
+                                      onEnablePIP={handleEnablePIP}
+                                      onDisablePIP={handleDisablePIP}
+                                      onPause={handlePause}
+                                      onBuffer={() => console.log('onBuffer')}
+                                      onSeek={e => console.log('onSeek', e)}
+                                      onEnded={handleEnded}
+                                      onError={e => console.log('onError', e)}
+                                      onProgress={handleProgress}
+                                      onDuration={handleDuration} />
+                        <MDBCardBody>
+                            <MDBCardTitle>영상정보</MDBCardTitle>
+                            <MDBCardText>
+                                <tbody>
+                                {/*  <tr>
                     <th>url</th>
                     <td className={!url ? 'faded' : ''}>
                         {(url instanceof Array ? 'Multiple' : url) || 'null'}
                     </td>
                 </tr>*/}
-                <tr>
-                    <th>영상이 </th>
-                    <td>{playing ? '나오고 있습니다.' : '멈췄습니다.'}</td>
-                </tr>
-                <tr>
-                    <th>볼륨크기</th>
-                    <td>{volume.toFixed(3)}</td>
-                </tr>
-                <tr>
-                    <th>영상길이</th>
-                    <td><Duration seconds={duration} /></td>
-                </tr>
-                {/*<tr>
+                                <tr>
+                                    <th>영상이 </th>
+                                    <td>{playing ? '나오고 있습니다.' : '멈췄습니다.'}</td>
+                                </tr>
+                                <tr>
+                                    <th>볼륨크기</th>
+                                    <td>{volume.toFixed(3)}</td>
+                                </tr>
+                                <tr>
+                                    <th>영상길이</th>
+                                    <td><Duration seconds={duration} /></td>
+                                </tr>
+                                {/*<tr>
                     <th>remaining</th>
                     <td><Duration seconds={duration * (1 - played)} /></td>
                 </tr>
                         */}
-                    {/* <tr>
+                                {/* <tr>
                     <th>played</th>
                     <td>{played.toFixed(3)}</td>
                 </tr>
@@ -229,9 +234,55 @@ const VideoTest = () => {
                     <td><Duration seconds={duration * played} /></td>
                 </tr>*/}
 
-                </tbody>
-                <MDBInput type="textarea" label="댓글" rows="10" />
-            </table>
+                                </tbody>
+                            </MDBCardText>
+                            <tr>
+                                <th>재생 버튼</th>
+                                <td>
+
+                                    <MDBBtn onClick={handlePlayPause}>{playing ? '일시정지' : '재생시작'}</MDBBtn>
+
+                                    {light &&
+                                    <MDBBtn onClick={() => player.showPreview()}>Show preview</MDBBtn>}
+                                    {ReactPlayer.canEnablePIP(url) &&
+                                    <MDBBtn onClick={handleTogglePIP}>{pip ? 'Disable PiP' : 'Enable PiP'}</MDBBtn>}
+                                </td>
+                            </tr>
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
+
+                <form method = "post">
+            <div className="form-group">
+                <div className="form-group">
+                </div>
+            <label htmlFor="exampleFormControlInput1">제목</label>
+            <MDBInput type="text" className="form-control" id="exampleFormControlInput1" name="title" placeholder="원룸입니다." />
+            </div>
+            <div className="form-group">
+            <label htmlFor="exampleFormControlInput1">작성자</label>
+            <MDBInput type="text" className="form-control" id="exampleFormControlInput1" name="crea_id" placeholder="김수미" />
+            </div>
+            <div className="form-group">
+            <label htmlFor="exampleFormControlTextarea1">내용</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" name="contents" rows={10}>
+                집안에 짐이 많고 가구도 많지만 원룸입니다.
+            </textarea>
+            </div>
+                
+            <MDBBtn type="submit" className="btn btn-info">수정하기</MDBBtn>
+                    <Link to={"/videocommunity"}>  <MDBBtn type="button" className="btn btn-secondary">목록으로</MDBBtn></Link>
+            </form>
+            </div>
+            {/* /.panel-body */}
+            </div>
+            {/* /.panel */}
+            </div>
+            {/* /.col-lg-12 */}
+            </div>
+            </div>
+            {/* /#page-wrapper */}
+
 
         </div>
     );

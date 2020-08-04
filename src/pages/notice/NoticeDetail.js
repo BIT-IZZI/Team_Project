@@ -17,6 +17,7 @@ const Event = () => {
                                 <img
                                 alt=""
                                 src = {corona}
+                                width={"100%"}
                                 className="d-inline-block align-top"
                                     />
                         </div>
