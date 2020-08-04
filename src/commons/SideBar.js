@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/css/main.css'
-import logo from "../assets/img/logo3.png";
-import {Navbar} from "react-bootstrap";
+import {MDBInput} from 'mdbreact'
 
 const SideBar = () => {
     return (
@@ -16,28 +15,31 @@ const SideBar = () => {
                 </li>
                 <li className="nav-item">
                 <a className="nav-link" href="#">
-                        <span className="menu-title">두번째</span>
+                        <span className="menu-title">서비스 소개</span>
                     </a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
-                        <span className="menu-title">세번째</span>
+                        <span className="menu-title">이사 정보</span>
                     </a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
-                        <span className="menu-title">네번째</span>
+                        <span className="menu-title">생활 정보</span>
                     </a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
-                        <span className="menu-title">다섯째</span>
+                        <span className="menu-title">자유 게시판</span>
                     </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        <span className="menu-title">여섯째</span>
+                    <a className="nav-link" href="/application">
+                        <span className="menu-title">App</span>
                     </a>
+                </li>
+                <li>
+                    <MDBInput label="Search" size="sm" />
                 </li>
             </ul>
         </nav>

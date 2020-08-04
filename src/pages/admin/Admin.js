@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {Navigator, SideBar, Footer} from "../../commons/index";
-
 import '../../assets/css/sb-admin-2.css'
 
 const Admin = () => {
@@ -9,7 +7,7 @@ const Admin = () => {
         <>
             <nav className="sidebar sidebar-offcanvas">
                 <ul className="nav">
-                    <li className="nav-item nav-category"><h1>Dashboard</h1></li>
+                    <li className="nav-item nav-category"><h1>관리자 페이지</h1></li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
                             <span className="menu-title">사용자 관리</span>
@@ -41,7 +39,7 @@ const Admin = () => {
                 <div id="page-wrapper">
                     <div className="row">
                         <div className="col-lg-12"><br/>
-                            <h2 className="page-header">관리자 페이지</h2><br/>
+                            <h2 className="page-header">사용자 관리</h2><br/>
                         </div>
                     </div>
                     <div className="row">
@@ -51,48 +49,48 @@ const Admin = () => {
                                     <table width="100%" className="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                         <tr>
-                                            <th>Title</th>
-                                            <th>Editor</th>
-                                            <th>Date</th>
-                                            <th>View</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Reg_Date</th>
+                                            <th>state</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr className="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
-                                            <td className="center">4</td>
+                                            <td>kaulk</td>
+                                            <td>김가을</td>
+                                            <td>2018/02/01</td>
+                                            <td>온라인</td>
                                         </tr>
                                         <tr className="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
-                                            <td className="center">5</td>
+                                            <td>somunh</td>
+                                            <td>소문혁</td>
+                                            <td>2020/04/05</td>
+                                            <td>오프라인</td>
                                         </tr>
-                                        <tr className="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.5</td>
-                                            <td>Win 95+</td>
-                                            <td className="center">5.5</td>
+                                        <tr className="even gradeC">
+                                            <td>byuuun</td>
+                                            <td>변장원</td>
+                                            <td>2018/01/01</td>
+                                            <td>오프라인</td>
                                         </tr>
-                                        <tr className="even gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 6</td>
-                                            <td>Win 98+</td>
-                                            <td className="center">6</td>
+                                        <tr className="even gradeC">
+                                            <td>seoded</td>
+                                            <td>서동석</td>
+                                            <td>2020/08/01</td>
+                                            <td>오프라인</td>
                                         </tr>
-                                        <tr className="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 7</td>
-                                            <td>Win XP SP2+</td>
-                                            <td className="center">7</td>
+                                        <tr className="even gradeC">
+                                            <td>yongt</td>
+                                            <td>김용태</td>
+                                            <td>2019/09/01</td>
+                                            <td>오프라인</td>
                                         </tr>
-                                        <tr className="even gradeA">
-                                            <td>Trident</td>
-                                            <td>AOL browser (AOL desktop)</td>
-                                            <td>Win XP</td>
-                                            <td className="center">6</td>
+                                        <tr className="even gradeC">
+                                            <td>gwadok</td>
+                                            <td>주광옥</td>
+                                            <td>2019/12/11</td>
+                                            <td>온라인</td>
                                         </tr>
                                         </tbody>
                                     </table>

@@ -102,7 +102,7 @@ const VideoUploadPage = () => {
                         <img src={QRcode}/>
                     </Modal>
                 </Button>
-                <MDBBtn type={"primary"} onClick>
+                <MDBBtn type={"primary"} onClick href={"/videotest"}>
                     submit
                 </MDBBtn>
             </div>

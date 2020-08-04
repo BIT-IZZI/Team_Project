@@ -1,7 +1,9 @@
 import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player'
-import { findDOMNode } from 'react-dom'
 import Duration from './Duration'
+import {MDBInput} from 'mdbreact'
+
+
 const VideoTest = () => {
    const [state,setState]=useState("")
    const [url,setUrl]=useState(null)
@@ -35,11 +37,11 @@ const VideoTest = () => {
        )
    }
    const  handlePlayPause = () => {
-       setPlaying(false )
+       setPlaying(!playing )
    }
 
    const handleTogglePIP = () => {
-       setPip(true)
+       setPip(!pip)
     }
 
    const handlePlay = () => {
@@ -54,9 +56,9 @@ const VideoTest = () => {
         console.log('onDisablePIP')
         setPip(!pip)
     }
-    const   handlePause = () => {
+    const handlePause = () => {
         console.log('onPause')
-        setPlaying(false)
+        setPlaying(false)//무조건 false로 둘것
     }
     const handleEnded = () => {
         console.log('onEnded')
@@ -89,8 +91,6 @@ const VideoTest = () => {
         setParseFloat(e.target.value)
     }
 
-
-    const SEPARATOR = ' · '
     return (
         <div>
             <ReactPlayer  ref={playerref}
@@ -130,10 +130,10 @@ const VideoTest = () => {
                 </tr>*/}
                 <tbody>
                 <tr>
-                    <th>Controls</th>
+                    <th>재생 버튼</th>
                     <td>
 
-                        <button onClick={handlePlayPause}>{playing ? '일시정지' : 'Play'}</button>
+                        <button onClick={handlePlayPause}>{playing ? '일시정지' : '재생시작'}</button>
 
                         {light &&
                         <button onClick={() => player.showPreview()}>Show preview</button>}
@@ -192,29 +192,30 @@ const VideoTest = () => {
 
             <table>
                 <tbody>
-                <tr>
+              {/*  <tr>
                     <th>url</th>
                     <td className={!url ? 'faded' : ''}>
                         {(url instanceof Array ? 'Multiple' : url) || 'null'}
                     </td>
+                </tr>*/}
+                <tr>
+                    <th>영상이 </th>
+                    <td>{playing ? '나오고 있습니다.' : '멈췄습니다.'}</td>
                 </tr>
                 <tr>
-                    <th>playing</th>
-                    <td>{playing ? 'true' : 'false'}</td>
-                </tr>
-                <tr>
-                    <th>volume</th>
+                    <th>볼륨크기</th>
                     <td>{volume.toFixed(3)}</td>
                 </tr>
                 <tr>
-                    <th>duration</th>
+                    <th>영상길이</th>
                     <td><Duration seconds={duration} /></td>
                 </tr>
-                <tr>
+                {/*<tr>
                     <th>remaining</th>
                     <td><Duration seconds={duration * (1 - played)} /></td>
                 </tr>
-               {/* <tr>
+                        */}
+                    {/* <tr>
                     <th>played</th>
                     <td>{played.toFixed(3)}</td>
                 </tr>
@@ -229,7 +230,9 @@ const VideoTest = () => {
                 </tr>*/}
 
                 </tbody>
+                <MDBInput type="textarea" label="댓글" rows="10" />
             </table>
+
         </div>
     );
 };

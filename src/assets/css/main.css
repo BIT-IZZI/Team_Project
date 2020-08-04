@@ -40,7 +40,6 @@ main.masthead .intro-text .intro-heading {
     position: relative;
     left: 150px;
 }
-
 .video-bg{
     background-color: #2176C1;
     border: 0px;
@@ -168,6 +167,7 @@ main.masthead .intro-text .intro-heading {
     color: black; }
 
 .footer {
+    color: white;
     text-align: center;
     background: #2176C1;
     padding: 30px 1rem;

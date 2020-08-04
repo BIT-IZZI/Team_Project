@@ -6,14 +6,14 @@ import '../../assets/css/sb-admin-2.css'
 const Charts = () => {
     const state = {
         labels: ['January', 'February', 'March',
-            'April', 'May'],
+            'April', 'May', 'June','July',"August"],
         datasets: [
             {
                 label: '방문',
                 backgroundColor: 'rgba(75,192,192,1)',
                 borderColor: 'rgba(0,0,0,1)',
                 borderWidth: 2,
-                data: [65, 59, 80, 81, 56]
+                data: [65, 59, 80, 81, 56, 40, 44, 12]
             }
         ]
     }

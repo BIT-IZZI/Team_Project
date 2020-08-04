@@ -3,6 +3,8 @@ import React from 'react';
 import {SideBar} from "../../commons/index";
 
 import '../../assets/css/sb-admin-2.css'
+import {Link} from "react-router-dom";
+import {MDBBtn} from "mdbreact";
 
 const Market = () => {
     return (
@@ -34,43 +36,44 @@ const Market = () => {
                                         </thead>
                                         <tbody>
                                         <tr className="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
+                                            <td>원형 식탁 판매합니다!</td>
+                                            <td>문강태</td>
+                                            <td>2020/08/02</td>
                                             <td className="center">4</td>
                                         </tr>
                                         <tr className="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
+                                            <td>행거 구매합니다!</td>
+                                            <td>고문영</td>
+                                            <td>2020/08/01</td>
                                             <td className="center">5</td>
                                         </tr>
                                         <tr className="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.5</td>
-                                            <td>Win 95+</td>
-                                            <td className="center">5.5</td>
+                                            <td>접이식 의자 구매합니다.</td>
+                                            <td>문상태</td>
+                                            <td>2020/08/01</td>
+                                            <td className="center">5</td>
                                         </tr>
                                         <tr className="even gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 6</td>
-                                            <td>Win 98+</td>
+                                            <td>장농 판매합니다.</td>
+                                            <td>박규영</td>
+                                            <td>2020/07/31</td>
                                             <td className="center">6</td>
                                         </tr>
                                         <tr className="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 7</td>
-                                            <td>Win XP SP2+</td>
+                                            <td>컴퓨터 책상 판매합니다!</td>
+                                            <td>강기둥</td>
+                                            <td>2020/07/30</td>
                                             <td className="center">7</td>
                                         </tr>
                                         <tr className="even gradeA">
-                                            <td>Trident</td>
-                                            <td>AOL browser (AOL desktop)</td>
-                                            <td>Win XP</td>
+                                            <td>선풍기 구매합니다!</td>
+                                            <td>2020/07/27</td>
+                                            <td>장규리</td>
                                             <td className="center">6</td>
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <Link to="/write"><MDBBtn className="btn blue-gradient">글쓰기</MDBBtn></Link>
                                 </div>
                                 {/* /.panel-body */}
                             </div>

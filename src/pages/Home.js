@@ -13,6 +13,7 @@ import {CustomerInfo, Mypage, Order, Payment, Statistics} from "./CompanyPage";
 import {Signup, Login} from "./Account";
 import ModalTest from "../components/modalTest/ModalTest";
 import VideoTest from "../components/videoUpload/VideoTest";
+import Weather from "../components/weather/Weather";
 
 const Home = () => {
     return (
@@ -48,6 +49,8 @@ const Home = () => {
                 <Route path={"/contacts"} component={Contacts}/>
                 <Route path={"/test"} component={ModalTest}/>
                 <Route path={"/videotest"} component={VideoTest}/>
+                <Route path={"/wh"} component={Weather}/>
+
             </Switch>
             <Footer/>
         </>

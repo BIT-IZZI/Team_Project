@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, Navbar, Form, FormControl, Button} from 'react-bootstrap';
+import {Nav, Navbar, Form} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import '../assets/css/main.css'
 import logo from '../assets/img/logo2.png'
@@ -24,7 +24,7 @@ export const Navigator = () => (
                 <Link to="/video"><Navbar.Brand>비디오올리기</Navbar.Brand></Link>
                 <Link to="/type"><Navbar.Brand>이사타입</Navbar.Brand></Link>
                 <Link to="/estimate"><Navbar.Brand>견적신청서</Navbar.Brand></Link>
-                
+
 
 
             </Nav>
@@ -37,4 +37,4 @@ export const Navigator = () => (
         </Navbar>
     </div>
 )
-export default Navigator
+export default Navigator;
