@@ -1,10 +1,9 @@
 import React from 'react';
 
-import {Navigator, SideBar, Footer} from "../../commons/index";
-import logo from '../../assets/img/logo3.png'
+import {SideBar} from "../../commons/index";
+import corona from '../../assets/img/corona.png'
 
 import '../../assets/css/sb-admin-2.css'
-import {Navbar} from "react-bootstrap";
 
 const Event = () => {
     return (
@@ -17,9 +16,7 @@ const Event = () => {
                             <h2 className="page-header">자세히 보기</h2><br/>
                                 <img
                                 alt=""
-                                src = {logo}
-                                width="75"
-                                height="75"
+                                src = {corona}
                                 className="d-inline-block align-top"
                                     />
                         </div>

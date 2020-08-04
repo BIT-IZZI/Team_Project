@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navigator,SideBar,Footer} from '../commons/index'
+import {SideBar} from '../commons/index'
 import '../assets/css/sb-admin-2.css'
 
 const Write = () => {

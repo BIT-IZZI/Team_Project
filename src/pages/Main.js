@@ -2,8 +2,8 @@ import React from 'react';
 import '../assets/css/main.css'
 import ReactPlayer from "react-player";
 import img from '../assets/img/img.gif'
-
 import {CardDeck,Card} from 'react-bootstrap'
+import {Weather} from './index'
 
 const Main = () => {
 
@@ -14,6 +14,7 @@ const Main = () => {
                         <div className="intro-lead-in">이사 견적,</div>
                         <div className="intro-lead-in">내 방에서 알아보세요!</div>
                     </div>
+                <Weather/>
             </main>
             <div className="video-bg">
                     <ReactPlayer
@@ -25,8 +26,8 @@ const Main = () => {
             </div>
             <main className="masthead">
                 <div className="intro-text">
-                    <div className="intro-heading text-uppercase">방문 없이 견적짜는</div>
-                    <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../components/Estimate.js">이사하러 가기
+                    <div className="intro-heading text-uppercase">방문 없이 견적짜는</div><br/>
+                    <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../components/Move.js">이사하러 가기
                     </a>
                 </div>
             </main>
@@ -34,7 +35,6 @@ const Main = () => {
                 <div className="intro-text">
                     <div className="intro-heading text-uppercase">후기 및 사례</div>
                 </div>
-
                 <CardDeck className="mainCard" >
                     <Card>
                         <Card.Img variant="top" src={img} />

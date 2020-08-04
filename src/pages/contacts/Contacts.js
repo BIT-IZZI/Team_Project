@@ -94,7 +94,7 @@ const Contacts = () => {
                                                     height="75"
                                                 />
                                             </Navbar.Brand></Link>
-                                            <Link to="/"><Navbar.Brand>
+                                            <Link to="/reports"><Navbar.Brand>
                                                 <img
                                                     alt=""
                                                     src = {contactUs}

@@ -34,7 +34,7 @@ const SideBar = () => {
                     </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/application">
                         <span className="menu-title">App</span>
                     </a>
                 </li>
