@@ -38,9 +38,7 @@ const SideBar = () => {
                         <span className="menu-title">App</span>
                     </a>
                 </li>
-                <li>
                     <MDBInput label="Search" size="sm" />
-                </li>
             </ul>
         </nav>
         </>

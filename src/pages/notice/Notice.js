@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import {SideBar} from "../../commons";
+import {SideBar, Pagination} from "../../commons";
 
 import '../../assets/css/sb-admin-2.css'
 
@@ -69,6 +69,7 @@ const Market = () => {
                     </tr>
                     </tbody>
                     </table>
+                     <Pagination/>
                     </div>
                 {/* /.panel-body */}
                    </div>

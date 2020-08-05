@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import '../assets/css/main.css'
 
-import {Main, Contacts, Reports, Write, Review, Market, Community, Notice, NoticeDetail, Admin, Charts, Application} from './index'
+import {Main, Contacts, Reports, Write, Review, Market, Community, Notice, NoticeDetail, Admin, Charts, Users, Test, Application} from './index'
 
 import {Navigator, Footer} from "../commons/index";
 
@@ -23,6 +23,8 @@ const Home = () => {
                 <Route path={"/reports"} component={Reports}/>
                 <Route path={"/admin"} component={Admin}/>
                 <Route path={"/charts"} component={Charts}/>
+                <Route path={"/users"} component={Users}/>
+                <Route path={"/Test"} component={Test}/>
                 <Route path={"/write"} component={Write}/>
                 <Route path={"/application"} component={Application}/>
             </Switch>

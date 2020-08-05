@@ -2,7 +2,7 @@ import React from 'react';
 import {Pagination} from '../../commons/index'
 import '../../assets/css/sb-admin-2.css'
 
-const Admin = () => {
+const Users = () => {
     return (
         <>
             <nav className="sidebar sidebar-offcanvas">
@@ -109,4 +109,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default Users;

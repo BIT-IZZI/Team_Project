@@ -41,8 +41,7 @@ iframe {
 /*---------------------------------------------*/
 .mt-5 text-center{
   position: relative;
-
-  left: 500px;
+  left: 800px;
 }
 
 .container {
@@ -207,7 +206,7 @@ textarea.input100 {
   padding: 0 20px;
   min-width: 160px;
   height: 42px;
-  background-color: #bd59d4;
+  background-color: #2176C1;
   border-radius: 21px;
 
   font-family: JosefinSans-Bold;
@@ -215,18 +214,17 @@ textarea.input100 {
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
-  padding-top: 5px;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  box-shadow: 0 10px 30px 0px rgba(33, 118, 193, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(33, 118, 193, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(33, 118, 193, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(33, 118, 193, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(33, 118, 193, 0.5);
 }
 
 .contact100-form-btn:hover {
